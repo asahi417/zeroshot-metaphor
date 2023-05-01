@@ -1,9 +1,0 @@
-
-export OPENAI_API_KEY="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"
-
-python openai_multi_choice_metaphor.py
-
-python openai_multi_choice_metaphor_instruction.py
-
-python openai_multi_choice_metaphor_no_prompt.py
-
