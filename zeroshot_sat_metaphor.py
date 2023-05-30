@@ -35,7 +35,7 @@ language_models = {
     # "facebook/opt-13b": [lmppl.LM, 1],  # 1.3B
     # "facebook/opt-1.3b": [lmppl.LM, 4],  # 1.3B
     "facebook/opt-350m": [lmppl.LM, 128],  # 350M
-    "facebook/opt-125m": [lmppl.LM, 128],  # 125M
+    "facebook/opt-125m": [lmppl.LM, 256],  # 125M
     # "EleutherAI/gpt-neox-20b": [lmppl.LM, 1],  # 20B
     # "EleutherAI/gpt-j-6B": [lmppl.LM, 4],  # 6B
     # "EleutherAI/gpt-neo-2.7B": [lmppl.LM, 8],  # 2.7B
@@ -56,8 +56,8 @@ language_models = {
     # "t5-base": [lmppl.EncoderDecoderLM, 512],  # 220M
     # "t5-small": [lmppl.EncoderDecoderLM, 512],  # 60M
     # "google/flan-ul2": [lmppl.EncoderDecoderLM, 1],  # 20B
-    # "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
-    # "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
+    "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
+    "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
     "google/flan-t5-large": [lmppl.EncoderDecoderLM, 128],  # 770M
     "google/flan-t5-base": [lmppl.EncoderDecoderLM, 256],  # 220M
     "google/flan-t5-small": [lmppl.EncoderDecoderLM, 256],  # 60M
