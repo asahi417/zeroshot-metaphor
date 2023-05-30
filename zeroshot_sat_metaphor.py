@@ -16,7 +16,7 @@ for s in ['test', 'validation']:
     for n, i in enumerate(dataset[s]):
         a, b = i['stem']
         for m, (c, d) in enumerate(i['choice']):
-            statement = f"{a} is to {b} what {c} is to {d}"
+            statement = f'"{a} is to {b} what {c} is to {d}"'
             all_pairs.append({
                 "target": [a, b, c, d], "label": i['answer'] == m, "index": n, "statement": statement
             })
@@ -56,11 +56,12 @@ language_models = {
     # "t5-base": [lmppl.EncoderDecoderLM, 512],  # 220M
     # "t5-small": [lmppl.EncoderDecoderLM, 512],  # 60M
     "google/flan-ul2": [lmppl.EncoderDecoderLM, 1],  # 20B
-    # "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
-    # "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
-    # "google/flan-t5-large": [lmppl.EncoderDecoderLM, 128],  # 770M
-    # "google/flan-t5-base": [lmppl.EncoderDecoderLM, 256],  # 220M
-    # "google/flan-t5-small": [lmppl.EncoderDecoderLM, 256],  # 60M
+    "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
+    "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
+    "google/flan-t5-large": [lmppl.EncoderDecoderLM, 128],  # 770M
+    "google/flan-t5-base": [lmppl.EncoderDecoderLM, 256],  # 220M
+    "google/flan-t5-small": [lmppl.EncoderDecoderLM, 256],  # 60M
+    # "davinci": [lmppl.OpenAI, None]
 }
 
 def get_ppl(scoring_model, batch_size, label_siffix):
@@ -90,7 +91,12 @@ if __name__ == '__main__':
             scores_file = f"metaphor_results/scores_sat/{os.path.basename(target_model)}.{label}.json"
             if not os.path.exists(scores_file):
                 if scorer is None:
-                    scorer = lm_class(target_model, max_length=256) if lm_class is lmppl.MaskedLM else lm_class(target_model, device_map='auto', low_cpu_mem_usage=True)
+                    if lm_class is lmppl.MaskedLM:
+                        scorer = lm_class(target_model, max_length=256)
+                    elif lm_class is lmppl.OpenAI:
+                        scorer = lm_class(model=target_model, api_key=os.environ['OPENAI_API_KEY'])
+                    else:
+                        scorer = lm_class(target_model, device_map='auto', low_cpu_mem_usage=True)
                 logging.info(f"[COMPUTING PERPLEXITY] model: `{target_model}`, label: `{label}`")
                 scores_dict = get_ppl(scorer, batch, suffix)
                 with open(scores_file, 'w') as f:
