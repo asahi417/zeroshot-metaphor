@@ -75,10 +75,7 @@ def get_ppl(scoring_model, batch_size, label_siffix):
         return [{"ppl": y, "input": x['statement'], "output": label_siffix,
                  "label": y['label'], "index": y['index'], "target": y['target']} for x, y in zip(all_pairs, ppls)]
     else:
-        ppls = scoring_model.get_perplexity(
-            input_texts=[f"{x['statement']} {label_siffix}" for x in all_pairs],
-            output_texts=[""] * len(all_pairs),
-            batch=batch_size)
+        ppls = scoring_model.get_perplexity([f"{x['statement']} {label_siffix}" for x in all_pairs], batch=batch_size)
         return [{"ppl": y, "input": f"{x['statement']} {label_siffix}", "output": "",
                  "label": y['label'], "index": y['index'], "target": y['target']} for x, y in zip(all_pairs, ppls)]
 
