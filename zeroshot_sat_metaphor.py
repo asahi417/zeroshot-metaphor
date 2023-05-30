@@ -56,8 +56,8 @@ language_models = {
     # "t5-base": [lmppl.EncoderDecoderLM, 512],  # 220M
     # "t5-small": [lmppl.EncoderDecoderLM, 512],  # 60M
     # "google/flan-ul2": [lmppl.EncoderDecoderLM, 1],  # 20B
-    "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
-    "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
+    # "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
+    # "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
     "google/flan-t5-large": [lmppl.EncoderDecoderLM, 256],  # 770M
     "google/flan-t5-base": [lmppl.EncoderDecoderLM, 1024],  # 220M
     "google/flan-t5-small": [lmppl.EncoderDecoderLM, 1024],  # 60M
