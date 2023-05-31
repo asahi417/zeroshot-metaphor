@@ -96,7 +96,7 @@ if __name__ == '__main__':
                     elif lm_class is lmppl.OpenAI:
                         scorer = lm_class(model=target_model, api_key=os.environ['OPENAI_API_KEY'])
                     else:
-                        scorer = lm_class(target_model, device_map='auto', low_cpu_mem_usage=True)
+                        scorer = lm_class(target_model, device_map='auto', low_cpu_mem_usage=True, offload_folder=f'offload_folder/{os.path.basename(target_model)}')
                 logging.info(f"[COMPUTING PERPLEXITY] model: `{target_model}`, label: `{label}`")
                 scores_dict = get_ppl(scorer, batch, suffix)
                 with open(scores_file, 'w') as f:
