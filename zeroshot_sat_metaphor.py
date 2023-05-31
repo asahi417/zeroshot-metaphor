@@ -31,7 +31,7 @@ language_models = {
     # "facebook/opt-iml-max-30b": [lmppl.LM, 1],  # 30B
     # "facebook/opt-iml-max-1.3b": [lmppl.LM, 4],  # 1.3B
     # "facebook/opt-iml-1.3b": [lmppl.LM, 4],  # 1.3B
-    # "facebook/opt-30b": [lmppl.LM, 1],  # 30B
+    "facebook/opt-30b": [lmppl.LM, 1],  # 30B
     "facebook/opt-13b": [lmppl.LM, 1],  # 1.3B
     "facebook/opt-1.3b": [lmppl.LM, 4],  # 1.3B
     "facebook/opt-350m": [lmppl.LM, 128],  # 350M
@@ -55,13 +55,13 @@ language_models = {
     # "t5-large": [lmppl.EncoderDecoderLM, 128],  # 770M
     # "t5-base": [lmppl.EncoderDecoderLM, 512],  # 220M
     # "t5-small": [lmppl.EncoderDecoderLM, 512],  # 60M
-    # "google/flan-ul2": [lmppl.EncoderDecoderLM, 1],  # 20B
-    # "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
-    # "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
-    # "google/flan-t5-large": [lmppl.EncoderDecoderLM, 128],  # 770M
-    # "google/flan-t5-base": [lmppl.EncoderDecoderLM, 256],  # 220M
-    # "google/flan-t5-small": [lmppl.EncoderDecoderLM, 256],  # 60M
-    # "davinci": [lmppl.OpenAI, None]
+    "google/flan-ul2": [lmppl.EncoderDecoderLM, 1],  # 20B
+    "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
+    "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
+    "google/flan-t5-large": [lmppl.EncoderDecoderLM, 128],  # 770M
+    "google/flan-t5-base": [lmppl.EncoderDecoderLM, 256],  # 220M
+    "google/flan-t5-small": [lmppl.EncoderDecoderLM, 256],  # 60M
+    "davinci": [lmppl.OpenAI, None]
 }
 
 def get_ppl(scoring_model, batch_size, label_siffix):
