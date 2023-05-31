@@ -26,6 +26,7 @@ language_models = {
     "facebook/opt-iml-max-1.3b": [lmppl.LM, 4],  # 1.3B
     "facebook/opt-iml-1.3b": [lmppl.LM, 4],  # 1.3B
     "facebook/opt-30b": [lmppl.LM, 1],  # 30B
+    "facebook/opt-13b": [lmppl.LM, 1],  # 1.3B
     "facebook/opt-1.3b": [lmppl.LM, 4],  # 1.3B
     "facebook/opt-350m": [lmppl.LM, 128],  # 350M
     "facebook/opt-125m": [lmppl.LM, 256],  # 125M
