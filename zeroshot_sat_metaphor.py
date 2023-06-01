@@ -33,10 +33,10 @@ language_models = {
     "facebook/opt-350m": [lmppl.LM, 128],  # 350M
     "facebook/opt-125m": [lmppl.LM, 256],  # 125M
     "EleutherAI/gpt-neox-20b": [lmppl.LM, 1],  # 20B
-    "EleutherAI/gpt-j-6B": [lmppl.LM, 4],  # 6B
-    "EleutherAI/gpt-neo-2.7B": [lmppl.LM, 8],  # 2.7B
-    "EleutherAI/gpt-neo-1.3B": [lmppl.LM, 8],  # 1.3B
-    "EleutherAI/gpt-neo-125M": [lmppl.LM, 256],  # 125M
+    "EleutherAI/gpt-j-6B": [lmppl.LM, 2],  # 6B
+    "EleutherAI/gpt-neo-2.7B": [lmppl.LM, 4],  # 2.7B
+    "EleutherAI/gpt-neo-1.3B": [lmppl.LM, 4],  # 1.3B
+    "EleutherAI/gpt-neo-125M": [lmppl.LM, 128],  # 125M
     "gpt2-xl": [lmppl.LM, 8],  # 1.5B
     "gpt2-large": [lmppl.LM, 128],  # 774M
     "gpt2-medium": [lmppl.LM, 256],  # 355M
