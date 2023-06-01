@@ -86,6 +86,7 @@ if __name__ == '__main__':
         for label, suffix in label_template.items():
             scores_file = f"metaphor_results/scores_sat/{os.path.basename(target_model)}.{label}.json"
             if not os.path.exists(scores_file):
+                logging.info(f"[COMPUTING PERPLEXITY] model: `{target_model}`, label: `{label}`")
                 if scorer is None:
                     if lm_class is lmppl.MaskedLM:
                         scorer = lm_class(target_model, max_length=256)
@@ -93,7 +94,6 @@ if __name__ == '__main__':
                         scorer = lm_class(model=target_model, api_key=os.environ['OPENAI_API_KEY'])
                     else:
                         scorer = lm_class(target_model, device_map='auto', low_cpu_mem_usage=True, offload_folder=f'offload_folder/{os.path.basename(target_model)}')
-                logging.info(f"[COMPUTING PERPLEXITY] model: `{target_model}`, label: `{label}`")
                 scores_dict = get_ppl(scorer, batch, suffix)
                 with open(scores_file, 'w') as f:
                     json.dump(scores_dict, f)
