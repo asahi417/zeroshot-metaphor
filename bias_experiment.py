@@ -32,7 +32,27 @@ samples = [
     ["The sentence that he was referring to in our last meeting about the future direction to take in this long and important project", "is a metaphor."],
     ["The sentence that he was referring to in our last meeting about the future direction to take in this long and important project", "is literal."],
     ["The sentence that he was referring to in our last meeting about the future direction to take in this long and important project", "is an anomaly."],
-    ["The sentence that he was referring to in our last meeting about the future direction to take in this long and important project", "is difficult to interpret."]
+    ["The sentence that he was referring to in our last meeting about the future direction to take in this long and important project", "is difficult to interpret."],
+    ["This thing", "is a metaphor."],
+    ["This thing", "is literal."],
+    ["This thing", "is an anomaly."],
+    ["This thing", "is difficult to interpret."],
+    ["This entire thing", "is a metaphor."],
+    ["This entire thing", "is literal."],
+    ["This entire thing", "is an anomaly."],
+    ["This entire thing", "is difficult to interpret."],
+    ["The thing that he is referring to", "is a metaphor."],
+    ["The thing that he is referring", "is literal."],
+    ["The thing that he is referring", "is an anomaly."],
+    ["The thing that he is referring", "is difficult to interpret."],
+    ["The thing that he was referring to in our last meeting about the future direction to take", "is a metaphor."],
+    ["The thing that he was referring to in our last meeting about the future direction to take", "is literal."],
+    ["The thing he was referring to in our last meeting about the future direction to take", "is an anomaly."],
+    ["The thing he was referring to in our last meeting about the future direction to take", "is difficult to interpret."],
+    ["The thing that he was referring to in our last meeting about the future direction to take in this long and important project", "is a metaphor."],
+    ["The thing that he was referring to in our last meeting about the future direction to take in this long and important project", "is literal."],
+    ["The thing that he was referring to in our last meeting about the future direction to take in this long and important project", "is an anomaly."],
+    ["The thing that he was referring to in our last meeting about the future direction to take in this long and important project", "is difficult to interpret."]
 ]
 
 language_models = {
