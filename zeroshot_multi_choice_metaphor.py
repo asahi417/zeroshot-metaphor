@@ -17,44 +17,44 @@ dataset_list = [  # dataset, dataset_name, split
     ['Joanne/Metaphors_and_Analogies', 'Pairs_Jankowiac_set', "test"],
 ]
 language_models = {
-    "facebook/galactica-30b": [lmppl.LM, 1],  # 30B
-    "facebook/galactica-6.7b": [lmppl.LM, 2],  # 6.7B
-    "facebook/galactica-1.3b": [lmppl.LM, 4],  # 1.3B
-    "facebook/galactica-125m": [lmppl.LM, 512],  # 125
-    "facebook/opt-iml-30b": [lmppl.LM, 1],  # 30B
-    "facebook/opt-iml-max-30b": [lmppl.LM, 1],  # 30B
-    "facebook/opt-iml-max-1.3b": [lmppl.LM, 4],  # 1.3B
-    "facebook/opt-iml-1.3b": [lmppl.LM, 4],  # 1.3B
-    "facebook/opt-30b": [lmppl.LM, 1],  # 30B
-    "facebook/opt-13b": [lmppl.LM, 1],  # 1.3B
-    "facebook/opt-1.3b": [lmppl.LM, 4],  # 1.3B
-    "facebook/opt-350m": [lmppl.LM, 128],  # 350M
+    # "facebook/galactica-30b": [lmppl.LM, 1],  # 30B
+    # "facebook/galactica-6.7b": [lmppl.LM, 2],  # 6.7B
+    # "facebook/galactica-1.3b": [lmppl.LM, 4],  # 1.3B
+    # "facebook/galactica-125m": [lmppl.LM, 512],  # 125
+    # "facebook/opt-iml-30b": [lmppl.LM, 1],  # 30B
+    # "facebook/opt-iml-max-30b": [lmppl.LM, 1],  # 30B
+    # "facebook/opt-iml-max-1.3b": [lmppl.LM, 4],  # 1.3B
+    # "facebook/opt-iml-1.3b": [lmppl.LM, 4],  # 1.3B
+    # "facebook/opt-30b": [lmppl.LM, 1],  # 30B
+    # "facebook/opt-13b": [lmppl.LM, 1],  # 1.3B
+    # "facebook/opt-1.3b": [lmppl.LM, 4],  # 1.3B
+    # "facebook/opt-350m": [lmppl.LM, 128],  # 350M
     "facebook/opt-125m": [lmppl.LM, 256],  # 125M
-    "EleutherAI/gpt-neox-20b": [lmppl.LM, 1],  # 20B
-    "EleutherAI/gpt-j-6B": [lmppl.LM, 4],  # 6B
-    "EleutherAI/gpt-neo-2.7B": [lmppl.LM, 8],  # 2.7B
-    "EleutherAI/gpt-neo-1.3B": [lmppl.LM, 8],  # 1.3B
-    "EleutherAI/gpt-neo-125M": [lmppl.LM, 256],  # 125M
-    "gpt2-xl": [lmppl.LM, 8],  # 1.5B
-    "gpt2-large": [lmppl.LM, 128],  # 774M
-    "gpt2-medium": [lmppl.LM, 256],  # 355M
-    "gpt2": [lmppl.LM, 512],  # 124M
-    "bert-large-cased": [lmppl.MaskedLM, 256],  # 355M
-    "bert-base-cased": [lmppl.MaskedLM, 256],  # 110M
-    "roberta-large": [lmppl.MaskedLM, 256],  # 355M
-    "roberta-base": [lmppl.MaskedLM, 256],  # 110M
-    "google/ul2": [lmppl.EncoderDecoderLM, 1],  # 20B
-    "t5-11b": [lmppl.EncoderDecoderLM, 1],  # 11B
-    "t5-3b": [lmppl.EncoderDecoderLM, 4],  # 3B
-    "t5-large": [lmppl.EncoderDecoderLM, 128],  # 770M
-    "t5-base": [lmppl.EncoderDecoderLM, 512],  # 220M
-    "t5-small": [lmppl.EncoderDecoderLM, 512],  # 60M
-    "google/flan-ul2": [lmppl.EncoderDecoderLM, 1],  # 20B
-    "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
-    "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
-    "google/flan-t5-large": [lmppl.EncoderDecoderLM, 256],  # 770M
-    "google/flan-t5-base": [lmppl.EncoderDecoderLM, 1024],  # 220M
-    "google/flan-t5-small": [lmppl.EncoderDecoderLM, 1024],  # 60M
+    # "EleutherAI/gpt-neox-20b": [lmppl.LM, 1],  # 20B
+    # "EleutherAI/gpt-j-6B": [lmppl.LM, 4],  # 6B
+    # "EleutherAI/gpt-neo-2.7B": [lmppl.LM, 8],  # 2.7B
+    # "EleutherAI/gpt-neo-1.3B": [lmppl.LM, 8],  # 1.3B
+    # "EleutherAI/gpt-neo-125M": [lmppl.LM, 256],  # 125M
+    # "gpt2-xl": [lmppl.LM, 8],  # 1.5B
+    # "gpt2-large": [lmppl.LM, 128],  # 774M
+    # "gpt2-medium": [lmppl.LM, 256],  # 355M
+    # "gpt2": [lmppl.LM, 512],  # 124M
+    # "bert-large-cased": [lmppl.MaskedLM, 256],  # 355M
+    # "bert-base-cased": [lmppl.MaskedLM, 256],  # 110M
+    # "roberta-large": [lmppl.MaskedLM, 256],  # 355M
+    # "roberta-base": [lmppl.MaskedLM, 256],  # 110M
+    # "google/ul2": [lmppl.EncoderDecoderLM, 1],  # 20B
+    # "t5-11b": [lmppl.EncoderDecoderLM, 1],  # 11B
+    # "t5-3b": [lmppl.EncoderDecoderLM, 4],  # 3B
+    # "t5-large": [lmppl.EncoderDecoderLM, 128],  # 770M
+    # "t5-base": [lmppl.EncoderDecoderLM, 512],  # 220M
+    # "t5-small": [lmppl.EncoderDecoderLM, 512],  # 60M
+    # "google/flan-ul2": [lmppl.EncoderDecoderLM, 1],  # 20B
+    # "google/flan-t5-xxl": [lmppl.EncoderDecoderLM, 1],  # 11B
+    # "google/flan-t5-xl": [lmppl.EncoderDecoderLM, 4],  # 3B
+    # "google/flan-t5-large": [lmppl.EncoderDecoderLM, 256],  # 770M
+    # "google/flan-t5-base": [lmppl.EncoderDecoderLM, 1024],  # 220M
+    # "google/flan-t5-small": [lmppl.EncoderDecoderLM, 1024],  # 60M
 }
 
 
